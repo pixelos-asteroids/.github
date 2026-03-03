@@ -14,7 +14,7 @@ This guide will help you **set up, sync, and build PixelOS** for **Nothing 3A / 
    
    [PixelOS_Android-16_QPR2](https://github.com/pixelos-asteroids/android_manifest)
 
-Use the guide available above.
+Use the guide available above manifest.
 
 ---
 
