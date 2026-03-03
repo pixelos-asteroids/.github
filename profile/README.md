@@ -9,67 +9,19 @@ This guide will help you **set up, sync, and build PixelOS** for **Nothing 3A / 
 
 ---
 
-## 📝 Table of Contents
-- [Prerequisites](#-prerequisites)  
-- [Setup Repository](#-setup-repository)  
-- [Sync Local Manifests](#-sync-local-manifests)  
-- [Build Instructions](#-build-instructions)  
-- [Tips & Notes](#-tips--notes)  
+## Manifest
+   [PixelOS_Android-16_QPR1](https://github.com/pixelos-asteroids/android_manifest/tree/sixteen-QPR1)
+   [PixelOS_Android-16_QPR2](https://github.com/pixelos-asteroids/android_manifest)
+
+Use the guide available above.
 
 ---
 
-## 🛠️ Prerequisites
-Make sure your system has the following installed:
+## Credits
+[Alex Koskovich](https://github.com/AKoskovich) and [Hiroshi](https://github.com/joshuah345) - Initial Device/Kernel/Vendor Trees
 
-- Linux with required build tools  
-- `repo` tool  
-- `git-lfs`  
-- Adequate storage (~400GB free recommended)  
+[HELLBOY017](https://github.com/HELLBOY017) - Glyph Interface support for AOSP, Sony Dolby adaptation
 
----
+[GHOST](https://github.com/Ghosuto) - Additional Glyph Interface features
 
-## 📂 Setup Repository
-Clone and initialize the PixelOS repository:
-
-```bash
-mkdir PixelOS && cd PixelOS
-repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b sixteen-qpr1 --git-lfs
-```
-
----
-
-## 🔄 Sync Local Manifests
-Add device-specific manifest for Nothing 3A / Pro AKA asteroids:
-
-```bash
-mkdir -p .repo/local_manifests
-wget https://raw.githubusercontent.com/pixelos-asteroids/android_manifest/sixteen-QPR1/asteroids.xml      -O .repo/local_manifests/asteroids.xml
-```
-
-Sync the repository:
-
-```bash
-repo sync
-```
-
----
-
-## 🏗️ Build Instructions
-
-### Nothing 3A / PRO (asteroids`)
-```bash
-. build/envsetup.sh
-breakfast asteroids
-m pixelos
-```
-
----
-
-## 💡 Tips & Notes
-- Run `source build/envsetup.sh` before building.  
-- If you face ABI_Check issue run below command
-```bash
-export SKIP_ABI_CHECKS=true
-```  
-
---- 
+[Fabian Leutenegger](https://github.com/33bca) - Initial Glyph Interface support for AOSP
